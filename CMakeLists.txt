@@ -8,7 +8,7 @@ enable_testing()
 
 file(GLOB_RECURSE SOURCES "src/*.cpp")
 add_executable(Vulkan_Test_1 main.cpp ${SOURCES})
-target_include_directories(Vulkan_Test_1 PUBLIC "src" "external")
+target_include_directories(Vulkan_Test_1 PUBLIC "src")# "external")
 target_include_directories(Vulkan_Test_1 PUBLIC "C:/VulkanSDK/1.2.182.0/Include")
 file(GLOB_RECURSE LIBS "C:/VulkanSDK/1.2.182.0/Lib/*.lib")
 target_link_libraries(Vulkan_Test_1 ${LIBS})
