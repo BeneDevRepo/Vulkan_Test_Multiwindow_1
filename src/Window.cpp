@@ -162,7 +162,7 @@ LRESULT Window::wndProc(UINT msg, WPARAM wParam, LPARAM lParam) {
 
 	case WM_ENTERSIZEMOVE:
 		std::cout << "WM EnterSizeMove\n";
-		SetTimer(wnd, 0x187420, 0, NULL);
+		SetTimer(wnd, 0x69420, 0, NULL);
 		break;
 
 	// case WM_MOUSEMOVE:
@@ -176,13 +176,13 @@ LRESULT Window::wndProc(UINT msg, WPARAM wParam, LPARAM lParam) {
 
 	case WM_EXITSIZEMOVE:
 		std::cout << "WM ExitSizeMove\n";
-		KillTimer(wnd, 0x187420);
+		KillTimer(wnd, 0x69420);
 		break;
 
 	case WM_TIMER:
 		// std::cout << "Timer\n";
 		SwitchToFiber(mainFiber);
-		break;
+		return 0;
 
 	case WM_HOTKEY:
 		switch(wParam) {
